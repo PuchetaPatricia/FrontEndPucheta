@@ -1,0 +1,24 @@
+
+div{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row{
+padding: 10px;
+}
+
+/* estilo imagen banner */
+@media (min-width: 576px){
+    #imagenBanner{
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px){
+    #imagenBanner{
+        width: 70%;
+    }
+}

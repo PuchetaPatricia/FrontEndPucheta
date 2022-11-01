@@ -1,0 +1,186 @@
+<div class="row">
+    <h1>Hard & Soft Skills</h1>
+
+
+    <div class="text-center col-sm-4 col-md-3 col-lg-2 circulo" *ngFor="let skill of skill">
+        <circle-progress 
+        [percent]="(skill.porcentaje)" 
+        [radius]="100" 
+        [title]="(skill.nombre)" 
+        [titleColor]="'black'"
+        [backgroundColor]="'white'"
+        [imageSrc]="''"
+        [imageHeight]="90" 
+        [imageWidth]="90" 
+        [showImage]="false"
+        [showTitle]="true"  
+        [showUnits]="false" 
+        [showSubtitle]="false"
+        [outerStrokeWidth]="16" 
+        [innerStrokeWidth]="2" 
+        [outerStrokeColor]="'#78C000'" 
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true" 
+        [animationDuration]="300" 
+        [responsive]="true"></circle-progress>
+
+        <div>
+            <td *ngIf="isLogged">
+                <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                    <i class="bi bi-pencil-square"></i></button>
+            </td>
+            <td *ngIf="isLogged">
+                <button class="btn btn-danger" (click)="delete(skill.id)">
+                    <i class="bi bi-trash-fill"></i></button>
+            </td>
+        </div>
+    </div>
+
+    <div style="text-align:right; margin-top: 1em;" >
+        <button type="button" routerLink="/newskill" class="btn btn-outline-dark" *ngIf="isLogged">Nueva Skill</button>
+    </div>
+
+
+
+
+    <!-- <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="70"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg, https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="70"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'"
+            [imageHeight]="80"
+            [imageWidth]="80"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="80"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="85"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="95"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'../assets/organizacion.png'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="90"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'../assets/tareas.png'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div>
+    <div class="text-center col-sm-4 col-md-3 col-lg-2">
+        <circle-progress
+            [percent]="80"
+            [radius]="100"
+            [backgroundColor] = "'white'"
+            [imageSrc] = "'../assets/resolver problemas.png'"
+            [imageHeight]="90"
+            [imageWidth]="90"
+            [showImage]="true"
+            [showUnits]="false"
+            [showSubtitle]="false"
+            [outerStrokeWidth]="16"
+            [innerStrokeWidth]="2"
+            [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+            [responsive] = "true"
+        ></circle-progress>
+    </div> -->
+</div>

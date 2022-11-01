@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/APLogo.png" class="img-fluid" id="logoAP">
+        </div>
+        <div class="redes">
+            <a href=""><img src="../../../assets/1727490_linkedin_social media_job_network_icon.png" class="img-fluid" id="linkedin"></a>
+            <a href=""><img src="../../../assets/1543322_network_social media_instagram_icon.png" class="img-fluid" id="instagram"></a>
+            <a href=""><img src="../../../assets/1543325_facebook_social media_icon.png" class="img-fluid" id="facebook"></a>
+            <a href=""><img src="../../../assets/1872635_social media_software_github_open source_developer_icon.png" class="img-fluid" id="github"></a> 
+            <button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Ingresar</button>
+            <button type="button" class="btn btn-outline-dark" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesion</button>
+        </div>
+    </div>
+</div>

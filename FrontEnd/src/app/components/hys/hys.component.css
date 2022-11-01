@@ -1,0 +1,15 @@
+.row{
+    background-color:#AECFCF;
+    padding: 40px;
+    margin-top: 1px;
+}
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agregar{
+    align-items: right;
+}
